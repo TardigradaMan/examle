@@ -21,7 +21,6 @@ export const actions = {
         '/api/auth/admin/login',
         formLogin
       );
-
       dispatch('setToken', token);
     } catch (error) {
       console.log(error);
@@ -34,11 +33,9 @@ export const actions = {
       console.log(error);
     }
   },
-
   setToken({ commit }, token) {
     this.$axios.setToken(token, 'Bearer');
     commit('setToken', token);
-
     Cookies.set('jwt-token', token);
   },
   logout({ commit }) {
