@@ -13,7 +13,6 @@
         </div>
       </div>
     </section>
-
     <section class="description">
       <div class="wrapper">
         <div class="header-block">
@@ -24,7 +23,6 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit
           </p>
         </div>
-
         <ul class="description__list">
           <li class="description__item description__item--left">
             <h3>Title</h3>
@@ -81,12 +79,10 @@
 </template>
 <script>
 import appSwipeSlider from '../components/main/swipe-slider';
-
 export default {
   components: {
     appSwipeSlider,
   },
-
   async asyncData({ store }) {
     const skills = await store.dispatch('content/fetchSkill');
 
@@ -137,12 +133,10 @@ export default {
 }
 .description {
   padding: 0px 10px 20px;
-  // background: rgba(121, 223, 107, 0.329);
   padding-top: 50px;
   padding-bottom: 110px;
   position: relative;
   z-index: 2;
-
   &::after {
     content: '';
     position: absolute;
@@ -152,8 +146,6 @@ export default {
 
     border-left: 500px solid $grey;
     border-top: 200px solid transparent;
-    // box-shadow: 0 0 10px #000;
-
     bottom: 0;
     left: 0;
     z-index: 1;
@@ -175,7 +167,6 @@ export default {
   &__item {
     box-shadow: $shadow;
     padding: 10px;
-
     &--left {
       text-align: right;
       padding-right: 70px;
@@ -223,9 +214,7 @@ export default {
         transform: translateY(-50%);
         top: 50%;
         left: 0;
-
         transform: scale(-1, 1);
-
         width: 65px;
         height: 65px;
       }
